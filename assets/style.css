@@ -109,14 +109,14 @@ section {
 .show-list__item-title {
     padding: 20px 20px 0;
     margin-bottom: 12px;
-    max-width: 75%;
+    max-width: 500px;
     font-size: 20px;
 }
 
 .show-list__item-description {
     color: #656565;
     padding: 0 20px 12px;
-    max-width: 500px;
+    
 }
 
 .show-list__item-description--title {
