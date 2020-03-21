@@ -69,7 +69,7 @@ p {
 }
 
 .big-lead {
-    font-size: 24px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.87);
     max-width: 600px;
     margin: auto;
@@ -110,7 +110,7 @@ section {
     padding: 20px 20px 0;
     margin-bottom: 12px;
     max-width: 500px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .show-list__item-description {
