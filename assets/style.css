@@ -37,7 +37,7 @@ p {
 }
 
 .page-content {
-    padding: 40px 20px 88px;
+    padding: 40px 16px 88px;
 }
 
 .page-title {
@@ -155,4 +155,10 @@ section {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.show-list__video {
+    width: calc(100% + 32px);
+    height: 300px;
+    margin-left: -16px;
 }
