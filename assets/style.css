@@ -27,6 +27,7 @@ h2,
 h3 {
     font-family: 'Montserrat', Arial, sans-serif;
     color: rgba(0, 0, 0, 0.87);
+    font-weight: 900;
 }
 
 p {
@@ -73,6 +74,11 @@ p {
     color: rgba(0, 0, 0, 0.87);
     max-width: 600px;
     margin: auto;
+    margin-bottom: 24px;
+}
+
+.centered-text {
+    text-align: center;
 }
 
 .round-divider {
@@ -83,7 +89,7 @@ p {
 }
 
 section {
-    margin-top: 48px;
+    margin-top: 56px;
 }
 
 .show-list__case {
@@ -155,6 +161,12 @@ section {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    transition: ease-out 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+    transition: ease-in 0.2s;
 }
 
 .show-list__video {
