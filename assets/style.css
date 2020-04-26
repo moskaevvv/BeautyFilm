@@ -1,50 +1,243 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+@import url('https://rsms.me/inter/inter.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+:root {
+  /*variables — colors*/
+  --black-text: #333333;
+  --helper-text: #656565;
+  --ctrl-pink: #ee6d85;
+  --link-blue: #0054b9;
+  /*variables — sizes*/
+  --phone-font-size: 2vw;
+  --tablet-font-size: 20px;
+  --phone-side-padding: 16px;
+  /*variables — brakepoints*/
+}
 
+html {
+  color: var(--black-text);
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: "tnum";
+  font-feature-settings: "zero";
+  font-size: var(--phone-font-size);
+}
 
-main,
+@media all and (min-width: 700px) {
+  html {
+    font-size: var(--tablet-font-size);
+  }
+}
+
 body,
-p,
-article,
 div,
 span,
+p,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 ul,
 li,
-a {
-    margin: 0;
+a,
+section,
+article,
+footer,
+nav,
+header,
+main,
+button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  border-radius: 0;
+  font-weight: 300;
+  text-decoration: none;;
+}
+
+.container {
+  max-width: 100%;
+}
+
+@media all and (min-width: 1180px) {
+  .container {
+    max-width: 880px;
+    margin: auto;
+  }
+}
+
+.page-header {
+  padding: 2rem var(--phone-side-padding) 0;
+}
+
+.page-header__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--helper-text);
+}
+
+@media all and (min-width: 700px) {
+  .page-header__title {
+    font-size: 1.2rem;
+    max-width: 200px;
+    padding-left: 120px;
+    position: relative;
+  }
+  .page-header__title::before {
+    display: block;
+    content: "";
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -44px;
+    border-radius: 50%;
+    background-image: url(imgs/title-photo.jpg);
+    background-size: cover;
+  }
+  .page-header {
+    margin-bottom: 0.8rem;
+    padding: 1.5rem 0;
+  }
+}
+
+@media all and (min-width: 820px) {
+  .page-header__title::before {
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .page-header__title::before {
+    top: 64px;
+    left:16px;
+  }
+  .page-header__title {
+    font-size: 1.2rem;
+    max-width: 200px;
+    padding: 112px 0 0 16px;
+    position: fixed;
+  }
+  .page-header {
     padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    color: rgba(0, 0, 0, 0.87);
-    font-weight: 900;
-}
-
-p {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.87);
-    line-height: 1.4;
+  }
 }
 
 .page-content {
-    padding: 40px 16px 28px;
+  padding: 0 var(--phone-side-padding);
 }
 
-.page-title {
-    text-align: center;
-    font-size: 48px;
-    line-height: 1.2;
+@media all and (min-width: 820px) {
+  .page-content {
+    padding: 0 16px 0 120px;
+  }
 }
+
+@media all and (min-width: 1024px) {
+  .page-content {
+    padding: 0 16px 0 240px;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .page-content {
+    padding: 0;
+  }
+}
+
+.page-intro__emojis {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.page-intro__title {
+font-size: 4rem;
+line-height: 1.2;
+font-weight: 800;
+margin-bottom: 2.6rem;
+}
+
+@media all and (min-width: 700px) {
+  .page-intro__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .page-intro__title {
+    font-size: 3.8rem;
+  }
+}
+
+
+.page-intro__top-btns {
+  font-size: 0;
+  margin-bottom: 3.2rem;
+}
+
+@media all and (min-width: 700px) {
+  .page-intro__top-btns {
+    margin-bottom: 2rem;
+  }
+}
+
+.page-intro__top-btns-item {
+  display: inline-block;
+}
+
+.page-intro__button {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1rem 2.4rem 1.3rem;
+  border-radius: 0.3rem;
+  font-weight: 300;
+  color: white;
+  background-color: var(--ctrl-pink);
+}
+
+@media all and (min-width: 700px) {
+  .page-intro__button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.6rem 0.8rem;
+    border-radius: 0.2rem;
+  }
+}
+
+.page-intro__button--secondary {
+  background: none;
+  color: var(--link-blue);
+}
+
+.page-intro__button-icon {
+  margin-right: 1rem;
+}
+
+.page-intro__paragraph {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+  max-width: 850px;
+}
+
+@media all and (min-width: 700px) {
+  .page-intro__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    max-width: 800px;
+  }
+}
+
 
 .article-title {
     font-size: 32px;
