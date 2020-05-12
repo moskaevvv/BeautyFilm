@@ -464,7 +464,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 340px;
+  height: 320px;
   z-index: 5;
   position: relative;
 }
@@ -521,7 +521,7 @@ figcaption {
   position: absolute;
   width: 230px;
   height: 230px;
-  background: transparent url("./img/portrait-mobile.jpg") 50% 50% no-repeat;
+  background: transparent url("./img/portrait-phone.jpg") 50% 50% no-repeat;
   background-size: cover;
   right: var(--min-side-padding);
   bottom: 0;
@@ -534,7 +534,7 @@ only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-resolution: 1.5dppx),
 only screen and (min-resolution: 144dpi)  {
   .page-footer__portrait  {
-      background-image: url("./img/portrait-mobile@2x.jpg");
+      background-image: url("./img/portrait-phone@2x.jpg");
    }
 }
 
