@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Александр Батраков — контент для индустрии здоровья и красоты в Москве</title>
-  <link rel="stylesheet" href="assets/style.css?19">
+  <title>Александр Батраков — видео-контент для индустрии здоровья и красоты в Москве</title>
+  <link rel="stylesheet" href="assets/style.css?21">
 </head>
 
 <body>
@@ -48,17 +48,21 @@
     <section class="page-intro">
       <div class="page-intro__container">
         <h1 class="page-intro__title">Делаю видеоролики</h1>
-        <p class="page-intro__subtitle">Контент для индустрии здоровья и красоты в Москве</p>
-        <a href="" class="page-intro__button page-intro__button--primary">
+        <p class="page-intro__subtitle">Контент для индустрии здоровья и красоты в Москве</p>
+        <a href="#contacts" class="page-intro__button page-intro__button--primary">
           Узнать цены
         </a>
-        <a href="https://www.youtube.com/watch?v=J5NJA_lIeLM" target="_" class="page-intro__button page-intro__button--showreel">
+        <a href="https://www.youtube.com/watch?v=J5NJA_lIeLM" target="_"
+          class="page-intro__button page-intro__button--showreel">
           <p class="page-intro__showreel-text">
             <span>▶</span> Посмотреть шоурил
           </p>
           <figure class="page-intro__showreel-picture">
             <img src="assets/img/hero-showreel.jpg" height="100%" width="auto" alt="">
           </figure>
+          <div class="page-intro__showreel-overlay">
+
+          </div>
         </a>
       </div>
     </section>
@@ -206,13 +210,15 @@
           Организация трансляций
         </h2>
         <div class="streams__content">
-          <p class="streams__paragraph">
-            Помогу организовать онлайн-трансляцию лекции или конференции.
-          </p>
-          <p class="streams__paragraph">
-            Пусть подписчики в социальных сетях Вконтакте и Youtube увидят качественный стрим ваших операционных
-            процедур.
-          </p>
+          <div class="streams__reg-text">
+            <p class="streams__paragraph">
+              Помогу организовать онлайн-трансляцию лекции или конференции.
+            </p>
+            <p class="streams__paragraph">
+              Пусть подписчики в социальных сетях Вконтакте и Youtube увидят качественный стрим ваших операционных
+              процедур.
+            </p>
+          </div>
           <div class="streams__channels">
             <h3 class="streams__channels-title">
               Каналы трансляций
@@ -247,7 +253,7 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__container">
+    <div class="page-footer__container" id="contacts">
       <article class="page-footer__contacts">
         <div class="page-footer__phone">
           <h2 class="page-footer__contacts-big-text">
@@ -263,10 +269,12 @@
         <div class="messengers">
           <ul class="page-footer__messengers-list">
             <li class="page-footer__messenger-item">
-              <a href="tg://resolve?domain=a_batrakov" class="page-footer__messenger-icon page-footer__messenger-icon--tg">Телеграм</a>
+              <a href="tg://resolve?domain=a_batrakov"
+                class="page-footer__messenger-icon page-footer__messenger-icon--tg">Телеграм</a>
             </li>
             <li class="page-footer__messenger-item">
-              <a href="https://api.whatsapp.com/send?phone=79603325980&text=" class="page-footer__messenger-icon page-footer__messenger-icon--wa">Вотсапп</a>
+              <a href="https://api.whatsapp.com/send?phone=79603325980&text="
+                class="page-footer__messenger-icon page-footer__messenger-icon--wa">Вотсапп</a>
             </li>
           </ul>
         </div>
@@ -277,6 +285,22 @@
       © Александр Батраков, 2020
     </p>
   </footer>
+  <script>
+    const anchors = document.querySelectorAll('a[href*="#"]')
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href')
+
+        document.querySelector('' + blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      })
+    }
+
+  </script>
 </body>
 
 </html>
