@@ -280,8 +280,8 @@ figcaption {
 
 .page-intro__button--showreel:hover {
   -webkit-transform: translateY(calc(-1 * var(--min-side-padding)));
-      -ms-transform: translateY(calc(-1 * var(--min-side-padding)));
-          transform: translateY(calc(-1 * var(--min-side-padding)));
+  -ms-transform: translateY(calc(-1 * var(--min-side-padding)));
+  transform: translateY(calc(-1 * var(--min-side-padding)));
 }
 
 .page-intro__button--showreel:hover .page-intro__showreel-overlay {
@@ -305,7 +305,7 @@ figcaption {
     0 12.5px 10px rgba(177, 142, 19, 0.08),
     0 22.3px 17.9px rgba(177, 142, 19, 0.12),
     0 41.8px 33.4px rgba(177, 142, 19, 0.16);
-          box-shadow:
+  box-shadow:
     0 2.8px 2.2px rgba(177, 142, 19, 0.02),
     0 6.7px 5.3px rgba(177, 142, 19, 0.04),
     0 12.5px 10px rgba(177, 142, 19, 0.08),
@@ -339,6 +339,17 @@ figcaption {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background: transparent url("/assets/img/girl-phone.jpg") 50% 50% no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi) {
+  .page-intro__showreel-picture {
+    background-image: url("/assets/img/girl-phone@2x.jpg");
+  }
 }
 
 .lead {
@@ -381,10 +392,49 @@ figcaption {
 
 .cases__branch-title {
   font-size: var(--min-article-title-size);
-  font-weight: 900;
+
   line-height: 1.2;
   margin-bottom: 40px;
   max-width: 280px;
+}
+
+.streams__title-bg,
+.cases__branch-title-bg {
+  font-weight: 900;
+  -webkit-transition: ease-out 0.2s;
+  -o-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+.page-footer__contacts-big-text-bg {
+  font-weight: 800;
+  -webkit-transition: ease-out 0.2s;
+  -o-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+.cases__branch-title:focus {
+  outline: none;
+}
+
+.streams__title:focus .streams__title-bg,
+.cases__branch-title:focus .cases__branch-title-bg {
+  background-color: var(--yellow-hover);
+  -webkit-transition: ease-in 0.2s;
+  -o-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
+}
+
+.page-footer__container:focus {
+  outline: none;
+}
+
+.page-footer__container:focus .page-footer__contacts-big-text-bg {
+  background-color: var(--yellow-hover);
+  color: var(--black-text);
+  -webkit-transition: ease-in 0.2s;
+  -o-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
 }
 
 .cases__case-item {
@@ -426,8 +476,8 @@ figcaption {
   -o-transition: ease-in 0.2s;
   transition: ease-in 0.2s;
   -webkit-transform: scale(1.6);
-      -ms-transform: scale(1.6);
-          transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
 }
 
 .cases__case-text--title {
@@ -505,8 +555,8 @@ figcaption {
   -o-transition: ease-in 0.2s;
   transition: ease-in 0.2s;
   -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   opacity: 0.72;
 }
 
@@ -524,6 +574,10 @@ figcaption {
   line-height: 1.2;
   margin-bottom: 24px;
   max-width: 280px;
+}
+
+.streams__title:focus {
+  outline: none;
 }
 
 .streams__paragraph {
@@ -816,6 +870,18 @@ only screen and (min-resolution: 144dpi) {
 }
 
 @media all and (min-width: 768px) {
+  .page-intro__showreel-picture {
+    background-image: url("/assets/img/girl-tablet.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-resolution: 1.5dppx),
+  only screen and (min-resolution: 144dpi) {
+    .page-intro__showreel-picture {
+      background-image: url("/assets/img/girl-tablet@2x.jpg");
+    }
+  }
 
   .page-header__container,
   .page-intro__container,
@@ -970,6 +1036,7 @@ only screen and (min-resolution: 144dpi) {
 
   .page-intro__showreel-picture {
     display: none;
+    background-image: none;
   }
 
   .page-intro__showreel-text {
@@ -1045,7 +1112,7 @@ only screen and (min-resolution: 144dpi) {
       0 22.3px 17.9px rgba(255, 152, 152, 0.24),
       0 41.8px 33.4px rgba(255, 152, 152, 0.32),
       0 100px 80px rgba(255, 152, 152, 0.4);
-            box-shadow:
+    box-shadow:
       0 2.8px 2.2px rgba(255, 152, 152, 0.04),
       0 6.7px 5.3px rgba(255, 152, 152, 0.08),
       0 12.5px 10px rgba(255, 152, 152, 0.16),
@@ -1062,8 +1129,8 @@ only screen and (min-resolution: 144dpi) {
 
   .page-intro__button--showreel:hover {
     -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
     background-color: var(--secondary-pink);
     border-color: var(--secondary-pink)
   }
